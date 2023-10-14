@@ -26,33 +26,63 @@
 
     <RadioGroup
         android:id="@+id/tip_options"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="158dp"
+        android:layout_marginEnd="220dp"
+        android:checkedButton="@id/option_20_percent"
         android:orientation="vertical"
-        android:checkedButton = "@id/option_20_percent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/service_question"
-        
+        app:layout_constraintVertical_bias="0.021">
+
         <RadioButton
             android:id="@+id/option_20_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amazing (20%)"/>
+            android:text="Amazing (20%)" />
 
         <RadioButton
             android:id="@+id/option_18_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Good (18%)"/>
+            android:text="Good (18%)" />
 
         <RadioButton
             android:id="@+id/option_15_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Okey (15%)"/>
-
+            android:text="Okey (15%)" />
     </RadioGroup>
 
+    <Switch
+        android:id="@+id/round_up_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Round up tip?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tip_options"
+        app:layout_constraintTop_toBottomOf="@id/tip_options" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tip_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button"
+        android:text="Tip Amount" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
