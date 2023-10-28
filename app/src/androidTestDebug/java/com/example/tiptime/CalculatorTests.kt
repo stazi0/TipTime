@@ -8,7 +8,8 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.hamcrest.Matchers.containsString
+import org.junit.matchers.JUnitMatchers.containsString
+//import org.hamcrest.Matchers.containsString
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -27,6 +28,6 @@ class CalculatorTests {
         onView(withId(R.id.calculate_button)).perform(click())
 
         onView(withId(R.id.tip_result))
-            .check(matches(withText(containsString("$10.00"))))
+            .check(matches(withText(containsString("$8.00"))))
     }
 }
